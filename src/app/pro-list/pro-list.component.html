@@ -1,0 +1,20 @@
+<section class="productFilter">
+	<div class="filterBox" (click)="filter_method(2)"> <span [class.active]="currentFilter=='2'">Vegetables</span></div>
+	<div class="filterBox" (click)="filter_method(1)"> <span [class.active]="currentFilter=='1'">Fruits </span></div>
+	<div class="filterBox" (click)="filter_method(3)"> <span [class.active]="currentFilter=='3'">Others </span></div>
+</section>
+<section class="productListCommon">
+   <ul class="productListCommon_UL">
+   	   <li *ngFor="let product of filteredList" class="type type_{{ product.product_type }}">
+   	   	  <div class="thumbmailWrap">
+   	   	  	 <img src="https://newhealthyfieapi.herokuapp.com/products/image/{{product.product_img}}" class="pro-thumb">
+   	   	  </div>
+   	   	  <div class="pro-meta">
+   	   	  	<h4 class="name"> {{product.name}}</h4>
+               <div class="PriceCart"> <h3 class="price"> {{product.our_price}}<sup>₹</sup></h3> <button class="atc" (click)="add_to_cart(product._id , 'add')"> Add</button></div>
+   	   	  </div>
+
+   	   </li>
+   </ul>	
+</section>
+<div class="cartBox"><i class="material-icons">add_shopping_cart</i> <span class="cartCounter" [ngClass]="(cartCounter=='0')?'emptyCart':'notEmptyCart'">{{ cartCounter }}</span></div>

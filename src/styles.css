@@ -1,0 +1,180 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Reem+Kufi');
+
+body{
+	margin: 0;
+    font-family: 'Reem Kufi';
+    background: #f5f5f5;
+}
+
+section.navCommon {
+    position: fixed;
+    background: #fff;
+    width: 60%;
+    height: 100%;
+    top: 0;
+    left: -60%;
+    z-index: 999;
+}
+
+.navCommonHeader i {
+    padding: 3px;
+    float: right;
+}
+.headerCommon{
+	color: #fff;
+    padding: 15px;
+	background: #804A58;  /* fallback for old browsers */
+}
+.headerCommon i {
+    font-size: 32px;
+    margin-top: 10px;
+}
+.brand-logo img {
+    width: 100%;
+}
+.brand-logo {
+    float: right;
+    width: 50px;
+    height: 40px;
+}
+.productListCommon_UL {
+    padding: 10px;
+    float: left;
+    margin: 0;
+    width: calc( 100% - 20px);
+}
+.productListCommon_UL li {
+    padding: 5px;
+    min-height: 50px;
+    margin-bottom: 15px;
+    list-style: none;
+    height: 250px;
+    width: 42%;
+    float: left;
+    margin-right: 2%;
+    margin-left: 2%;
+    border: 1px solid #eee;
+    background: #fff;
+}
+.productFilter {
+    height: 60px;
+    margin-top: -1px;
+    text-transform: uppercase;
+    background: #826068;
+    color: #fff;
+}
+.fixedYellow {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+    color: #fff;
+    background-color: #804A58;
+}
+.filterBox {
+    width: 33%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    cursor: pointer;
+    font-size: 12px;
+}
+.filterBox span.active {
+    background: #fff;
+    padding: 12px;
+    color: #000;
+    border-radius: 5px;
+}
+.filterBox:nth-child(2) {
+    width: 34%;
+    position: relative;
+}
+.filterBox:nth-child(2):before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    background: #fff;
+    left: 8px;
+    top: 14px;
+}
+.filterBox:nth-child(2):after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    background: #fff;
+    right: 8px;
+    top: 14px;
+}
+.thumbmailWrap{
+    width: 100%;
+}
+.pro-thumb{
+    width: 100%;
+    height: 150px;
+}
+h4.name {
+    font-weight: lighter;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+}
+.cartBox {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #804A58;
+    color: #fff;
+    z-index: 99;
+    border-radius: 3px;
+}
+.cartBox i{
+    font-size: 40px;
+}
+.PriceCart {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+h3.price {
+    float: left;
+    width: 50%;
+}
+.PriceCart button.atc {
+    width: 50%;
+    background: lightgreen;
+    border: none;
+    padding: 7px;
+    border-radius: 3px;
+}
+
+span.cartCounter {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    z-index: 999;
+    right: 4px;
+    top: 10px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 28px;
+}
+.cartCounter.notEmptyCart{
+    background-color: #B22222;
+}
+.cartCounter.emptyCart{
+    background-color: #ccc;
+    color: #000;
+}
